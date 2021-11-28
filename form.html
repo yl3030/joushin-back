@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>久欣科技後台</title>
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <header>
+        <p class="text-end count">登出倒數計時<span class="count_num">5:00</span></p>
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <div class="menu-icon">
+                    <div class="bar bar-top"></div>
+                    <div class="bar bar-middle"></div>
+                    <div class="bar bar-bottom"></div>
+                </div>
+                <h1>國光客運語音播放系統</h1>
+                <div class="search-box d-flex align-items-center">
+                    <input type="text">
+                    <div class="search-btn d-flex align-items-center justify-content-center"><img src="./public/img/search.svg" alt=""></div>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="user d-flex align-items-center justify-content-center">user name</div>
+                <div class="btn-logout d-flex align-items-center justify-content-center"><img src="./public/img/logout.svg" alt=""></div>
+            </div>
+        </div>
+    </header>
+    <main class="d-flex mt-4 justify-content-between">
+        <nav class="nav-box">
+            <ul class="nav-main">
+                <li>
+                    <a href="#" title="編輯播放聲音與檔案">
+                        <div class="icon">
+                            <img class="active" src="./public/img/nav-icon1-active.svg" alt="">
+                            <img class="normal" src="./public/img/nav-icon1-normal.svg" alt="">
+                        </div>
+                        <div class="text">
+                            <span class="nav-name">編輯播放聲音與檔案</span>
+                        </div>
+                        <div class="arrow"></div>
+                    </a>
+                    <!-- <span class="hover-text">編輯播放聲音與檔案</span> -->
+                </li>
+                <li class="dropdown active">
+                    <a>
+                        <div class="icon">
+                            <img class="active" src="./public/img/nav-icon2-active.svg" alt="">
+                            <img class="normal" src="./public/img/nav-icon2-normal.svg" alt="">
+                        </div>
+                        <div class="text">
+                            <span class="nav-name">公司音檔列表</span>
+                        </div>
+                        <div class="arrow"></div>
+                    </a>
+                    <ul class="nav-second">
+                        <li class="active"><a href="#">音檔列表子分類</a></li>
+                        <li><a href="#">我是子分類</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon">
+                            <img class="active" src="./public/img/nav-icon1-active.svg" alt="">
+                            <img class="normal" src="./public/img/nav-icon1-normal.svg" alt="">
+                        </div>
+                        <div class="text">
+                            <span class="nav-name">公司音檔列表</span>
+                        </div>
+                        <div class="arrow"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon">
+                            <img class="active" src="./public/img/nav-icon2-active.svg" alt="">
+                            <img class="normal" src="./public/img/nav-icon2-normal.svg" alt="">
+                        </div>
+                        <div class="text">
+                            <span class="nav-name">公司音檔列表</span>
+                        </div>
+                        <div class="arrow"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon">
+                            <img class="active" src="./public/img/nav-icon1-active.svg" alt="">
+                            <img class="normal" src="./public/img/nav-icon1-normal.svg" alt="">
+                        </div>
+                        <div class="text">
+                            <span class="nav-name">公司音檔列表</span>
+                        </div>
+                        <div class="arrow"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon">
+                            <img class="active" src="./public/img/nav-icon2-active.svg" alt="">
+                            <img class="normal" src="./public/img/nav-icon2-normal.svg" alt="">
+                        </div>
+                        <div class="text">
+                            <span class="nav-name">公司音檔列表</span>
+                        </div>
+                        <div class="arrow"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon">
+                            <img class="active" src="./public/img/nav-icon1-active.svg" alt="">
+                            <img class="normal" src="./public/img/nav-icon1-normal.svg" alt="">
+                        </div>
+                        <div class="text">
+                            <span class="nav-name">公司音檔列表</span>
+                        </div>
+                        <div class="arrow"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon">
+                            <img class="active" src="./public/img/nav-icon2-active.svg" alt="">
+                            <img class="normal" src="./public/img/nav-icon2-normal.svg" alt="">
+                        </div>
+                        <div class="text">
+                            <span class="nav-name">公司音檔列表</span>
+                        </div>
+                        <div class="arrow"></div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="main-box">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <div>
+                    <h3 class="main-title">公司音檔列表</h3>
+                    <h2 class="second-title">音檔列表子分類</h2>
+                </div>
+            </div>
+            
+            <form action="">
+                <div class="input-box">
+                    <label for="">播放聲音分類</label>
+                    <select name="" id="">
+                        <option value="國光課運" selected>國光課運</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label for="">標題</label>
+                    <input type="text">
+                </div>
+                <div class="input-box">
+                    <label for="">車輛編號</label>
+                    <input type="text">
+                </div>
+                <div class="input-box">
+                    <label for="">出發時間</label>
+                    <input type="text">
+                </div>
+                <div class="input-box">
+                    <label for="">時間檔案</label>
+                    <input type="text">
+                </div>
+                <div class="input-box">
+                    <label for="">內容</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="input-box upload">
+                    <label for="">檔案上傳</label>
+                    <div class="upload-btn">
+                        <span>請選擇檔案</span>
+                        <input type="file">
+                    </div>
+                </div>
+                <button class="form-send">送出</button>
+            </form>
+            
+        </div>
+    </main>
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/index.js"></script>
+</body>
+</html>
