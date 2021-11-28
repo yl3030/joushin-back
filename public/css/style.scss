@@ -205,46 +205,7 @@ main {
             margin-bottom: 10px;
             width: 100%;
             position: relative;
-            &.dropdown {
-                >a {
-                    .text {
-                        margin-right: 10px;
-                    }
-                    .arrow {
-                        width: 12px;
-                        height: 12px;
-                        background-image: url(../img/icon-arrow.svg);
-                        background-size: contain;
-                        background-position: center center;
-                        background-repeat: no-repeat;
-                        transform: rotate(-90deg);
-                        margin-top: 2px;
-                    }
-                }
-                &.active {
-                    >a {
-                        // background: transparent;
-                        .icon {
-                            img {
-                                &.normal {
-                                    // opacity: 1;
-                                }
-                            }
-                        }
-                        .text {
-                            // color: $main-color;
-                        }
-                        .arrow {
-                            transform: none;
-                            // background-image: url(../img/icon-arrow.svg);
-                        }
-                    }
-                    .nav-second {
-                        // display: block;
-                    }
-                }
-                
-            }
+            
             a {
                 display: flex;
                 align-items: center;
@@ -324,6 +285,39 @@ main {
                 width: 100px;
                 top: 0;
                 left: 100%;
+            }
+            &.dropdown {
+                >a {
+                    .text {
+                        margin-right: 10px;
+                    }
+                    .arrow {
+                        width: 12px;
+                        height: 12px;
+                        background-image: url(../img/icon-arrow.svg);
+                        background-size: contain;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        transform: rotate(-90deg);
+                        margin-top: 2px;
+                    }
+                }
+                &.active {
+                    >a {
+                        .arrow {
+                            // transform: none;
+                            background-image: url(../img/icon-arrow-white.svg);
+                        }
+                    }
+                }
+                &.drop {
+                    >a {
+                        .arrow {
+                            transform: none;
+                            background-image: url(../img/icon-arrow-white.svg);
+                        }
+                    }
+                }
             }
         }
     }

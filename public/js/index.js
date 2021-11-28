@@ -1,11 +1,14 @@
 $(".menu-icon").click(function(){
     $(this).toggleClass("active");
     $("main").toggleClass("active");
+    if($(".dropdown").hasClass("drop")){
+        $(".dropdown").children(".nav-second").hide();
+    }
 })
 
 $(".dropdown").click(function(){
     $(this).children(".nav-second").slideToggle(300);
-    $(this).toggleClass("active");
+    $(this).toggleClass("drop");
 })
 
 $(".search-btn").click(function(){

@@ -216,27 +216,6 @@ main.active .main-box {
   position: relative;
 }
 
-.nav-box .nav-main > li.dropdown > a .text {
-  margin-right: 10px;
-}
-
-.nav-box .nav-main > li.dropdown > a .arrow {
-  width: 12px;
-  height: 12px;
-  background-image: url(../img/icon-arrow.svg);
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  margin-top: 2px;
-}
-
-.nav-box .nav-main > li.dropdown.active > a .arrow {
-  -webkit-transform: none;
-          transform: none;
-}
-
 .nav-box .nav-main > li a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -314,6 +293,32 @@ main.active .main-box {
   width: 100px;
   top: 0;
   left: 100%;
+}
+
+.nav-box .nav-main > li.dropdown > a .text {
+  margin-right: 10px;
+}
+
+.nav-box .nav-main > li.dropdown > a .arrow {
+  width: 12px;
+  height: 12px;
+  background-image: url(../img/icon-arrow.svg);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  margin-top: 2px;
+}
+
+.nav-box .nav-main > li.dropdown.active > a .arrow {
+  background-image: url(../img/icon-arrow-white.svg);
+}
+
+.nav-box .nav-main > li.dropdown.drop > a .arrow {
+  -webkit-transform: none;
+          transform: none;
+  background-image: url(../img/icon-arrow-white.svg);
 }
 
 .nav-box .nav-second {
