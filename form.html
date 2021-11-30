@@ -10,23 +10,39 @@
 </head>
 <body>
     <header>
-        <p class="text-end count">登出倒數計時<span class="count_num">5:00</span></p>
-        <div class="d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center">
+        <p class="text-end count">登出倒數計時<span class="count_num"><span class="count_min"></span>:<span class="count_sec"></span></span></p>
+        <div class="d-flex align-items-center justify-content-between flex-wrap">
+            <div class="d-flex align-items-center left">
                 <div class="menu-icon">
                     <div class="bar bar-top"></div>
                     <div class="bar bar-middle"></div>
                     <div class="bar bar-bottom"></div>
                 </div>
                 <h1>國光客運語音播放系統</h1>
-                <div class="search-box d-flex align-items-center">
-                    <input type="text">
-                    <div class="search-btn d-flex align-items-center justify-content-center"><img src="./public/img/search.svg" alt=""></div>
+                <div class="search-box d-lg-flex d-none align-items-center">
+                    <div class="search-close d-flex align-items-center justify-content-center">
+                        <img src="./public/img/icon-cross.svg" alt="">
+                    </div>
+                    <div class="search-inner">
+                        <input type="text">
+                        <div class="search-btn d-flex align-items-center justify-content-center"><img src="./public/img/search.svg" alt=""></div>
+                    </div>
                 </div>
             </div>
-            <div class="d-flex align-items-center">
-                <div class="user d-flex align-items-center justify-content-center">user name</div>
-                <div class="btn-logout d-flex align-items-center justify-content-center"><img src="./public/img/logout.svg" alt=""></div>
+            <div class="d-sm-flex d-block align-items-center flex-wrap right">
+                <div class="search-box search-box-mobile d-lg-none d-flex align-items-center me-3 mb-sm-0 mb-3">
+                    <div class="search-close d-flex align-items-center justify-content-center">
+                        <img src="./public/img/icon-cross.svg" alt="">
+                    </div>
+                    <div class="search-inner">
+                        <input type="text">
+                        <div class="search-btn d-flex align-items-center justify-content-center"><img src="./public/img/search.svg" alt=""></div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between right-right">
+                    <div class="user d-flex align-items-center justify-content-center">user name</div>
+                    <div class="btn-logout d-flex align-items-center justify-content-center"><img src="./public/img/logout.svg" alt=""></div>
+                </div>
             </div>
         </div>
     </header>

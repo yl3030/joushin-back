@@ -10,23 +10,39 @@
 </head>
 <body>
     <header>
-        <p class="text-end count">登出倒數計時<span class="count_num">5:00</span></p>
-        <div class="d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center">
+        <p class="text-end count">登出倒數計時<span class="count_num"><span class="count_min"></span>:<span class="count_sec"></span></span></p>
+        <div class="d-flex align-items-center justify-content-between flex-wrap">
+            <div class="d-flex align-items-center left">
                 <div class="menu-icon">
                     <div class="bar bar-top"></div>
                     <div class="bar bar-middle"></div>
                     <div class="bar bar-bottom"></div>
                 </div>
                 <h1>國光客運語音播放系統</h1>
-                <div class="search-box d-flex align-items-center">
-                    <input type="text">
-                    <div class="search-btn d-flex align-items-center justify-content-center"><img src="./public/img/search.svg" alt=""></div>
+                <div class="search-box d-lg-flex d-none align-items-center">
+                    <div class="search-close d-flex align-items-center justify-content-center">
+                        <img src="./public/img/icon-cross.svg" alt="">
+                    </div>
+                    <div class="search-inner">
+                        <input type="text">
+                        <div class="search-btn d-flex align-items-center justify-content-center"><img src="./public/img/search.svg" alt=""></div>
+                    </div>
                 </div>
             </div>
-            <div class="d-flex align-items-center">
-                <div class="user d-flex align-items-center justify-content-center">user name</div>
-                <div class="btn-logout d-flex align-items-center justify-content-center"><img src="./public/img/logout.svg" alt=""></div>
+            <div class="d-sm-flex d-block align-items-center flex-wrap right">
+                <div class="search-box search-box-mobile d-lg-none d-flex align-items-center me-3 mb-sm-0 mb-3">
+                    <div class="search-close d-flex align-items-center justify-content-center">
+                        <img src="./public/img/icon-cross.svg" alt="">
+                    </div>
+                    <div class="search-inner">
+                        <input type="text">
+                        <div class="search-btn d-flex align-items-center justify-content-center"><img src="./public/img/search.svg" alt=""></div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between right-right">
+                    <div class="user d-flex align-items-center justify-content-center">user name</div>
+                    <div class="btn-logout d-flex align-items-center justify-content-center"><img src="./public/img/logout.svg" alt=""></div>
+                </div>
             </div>
         </div>
     </header>
@@ -144,11 +160,14 @@
                 </div>
             </div>
             
-            <div class="classify-add d-flex align-items-center justify-content-between">
+            <div class="classify-add d-flex align-items-center justify-content-between flex-wrap">
                 <label for="">播放聲音分類</label>
                 <select name="" id="">
                     <option value="">分類標題</option>
-                    <option value="">子分類：公司音檔列表</option>
+                    <option value="">公司音檔列表 - 子分類</option>
+                    <option value="">經過地區列表 - 子分類</option>
+                    <option value="">新增小時音檔 - 子分類</option>
+                    <option value="">新增公司音檔 - 子分類</option>
                 </select>
                 <input type="text">
                 <button>新增分類</button>
@@ -156,164 +175,186 @@
             <div class="classify-content">
                 <h4 class="classify-title">國光客運</h4>
                 <div class="row">
-                    <div class="col-md-6 mb-3 classify-content_inner">
-                        <div class="classify-content_main d-flex align-items-center">
-                            <div class="name">
-                                <div class="normal">
-                                    <p class="name_p">公司音檔列表</p>
-                                    <img class="arrow" src="./public/img/icon-arrow-blue.svg" alt="">
-                                </div>
-                                <div class="edit">
-                                    <input class="name_input" type="text" value="">
-                                </div>
-                            </div>
-                            <div class="icon">
-                                <img class="main-check check" src="./public/img/check-blue.svg" alt="">
-                                <img class="main-edit" src="./public/img/nav-icon1-normal.svg" alt="">
-                                <img class="main-delete" src="./public/img/icon-trash-can.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="classify-content_second-box">
-                            <div class="classify-content_second d-flex align-items-center justify-content-between">
-                                <div>
-                                    <input class="second-input" type="text" value="我是子分類" disabled="disabled">
+                    <div class="col-md-6 classify-content_inner">
+                        <div class="mb-3">
+                            <div class="classify-content_main d-flex align-items-center">
+                                <div class="name">
+                                    <div class="normal">
+                                        <p class="name_p">公司音檔列表</p>
+                                        <img class="arrow" src="./public/img/icon-arrow-blue.svg" alt="">
+                                    </div>
+                                    <div class="edit">
+                                        <input class="name_input" type="text" value="">
+                                    </div>
                                 </div>
                                 <div class="icon">
-                                    <img class="second-check check" src="./public/img/check-gray.svg" alt="">
-                                    <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
-                                    <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
+                                    <img class="main-check check" src="./public/img/check-blue.svg" alt="">
+                                    <img class="main-edit" src="./public/img/nav-icon1-normal.svg" alt="">
+                                    <img class="main-delete" src="./public/img/icon-trash-can.svg" alt="">
                                 </div>
                             </div>
-                            <div class="classify-content_second d-flex align-items-center justify-content-between">
-                                <input class="second-input" type="text" value="我是子分類" disabled="disabled">
-                                <div class="icon">
-                                    <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
-                                    <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
+                            <div class="classify-content_second-box">
+                                <div class="classify-content_second d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <input class="second-input" type="text" value="我是子分類" disabled="disabled">
+                                    </div>
+                                    <div class="icon">
+                                        <img class="second-check check" src="./public/img/check-gray.svg" alt="">
+                                        <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
+                                        <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3 classify-content_inner">
-                        <div class="classify-content_main d-flex align-items-center">
-                            <div class="name">
-                                <div class="normal">
-                                    <p class="name_p">公司音檔列表</p>
-                                    <img class="arrow" src="./public/img/icon-arrow-blue.svg" alt="">
-                                </div>
-                                <div class="edit">
-                                    <input class="name_input" type="text" value="">
-                                </div>
-                            </div>
-                            <div class="icon">
-                                <img class="main-check check" src="./public/img/check-blue.svg" alt="">
-                                <img class="main-edit" src="./public/img/nav-icon1-normal.svg" alt="">
-                                <img class="main-delete" src="./public/img/icon-trash-can.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="classify-content_second-box">
-                            <div class="classify-content_second d-flex align-items-center justify-content-between">
-                                <div>
-                                    <input class="second-input" type="text" value="我是子分類" disabled="disabled">
-                                </div>
-                                <div class="icon">
-                                    <img class="second-check check" src="./public/img/check-gray.svg" alt="">
-                                    <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
-                                    <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="classify-content_second d-flex align-items-center justify-content-between">
-                                <input class="second-input" type="text" value="我是子分類" disabled="disabled">
-                                <div class="icon">
-                                    <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
-                                    <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
+                                <div class="classify-content_second d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <input class="second-input" type="text" value="我是子分類" disabled="disabled">
+                                    </div>
+                                    <div class="icon">
+                                        <img class="second-check check" src="./public/img/check-gray.svg" alt="">
+                                        <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
+                                        <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 mb-3 classify-content_inner">
-                        <div class="classify-content_main d-flex align-items-center">
-                            <div class="name">
-                                <div class="normal">
-                                    <p class="name_p">公司音檔列表</p>
-                                    <img class="arrow" src="./public/img/icon-arrow-blue.svg" alt="">
-                                </div>
-                                <div class="edit">
-                                    <input class="name_input" type="text" value="">
-                                </div>
-                            </div>
-                            <div class="icon">
-                                <img class="main-check check" src="./public/img/check-blue.svg" alt="">
-                                <img class="main-edit" src="./public/img/nav-icon1-normal.svg" alt="">
-                                <img class="main-delete" src="./public/img/icon-trash-can.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="classify-content_second-box">
-                            <div class="classify-content_second d-flex align-items-center justify-content-between">
-                                <div>
-                                    <input class="second-input" type="text" value="我是子分類" disabled="disabled">
+                        <div class="mb-3">
+                            <div class="classify-content_main d-flex align-items-center">
+                                <div class="name">
+                                    <div class="normal">
+                                        <p class="name_p">經過地區列表</p>
+                                        <img class="arrow" src="./public/img/icon-arrow-blue.svg" alt="">
+                                    </div>
+                                    <div class="edit">
+                                        <input class="name_input" type="text" value="">
+                                    </div>
                                 </div>
                                 <div class="icon">
-                                    <img class="second-check check" src="./public/img/check-gray.svg" alt="">
-                                    <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
-                                    <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
+                                    <img class="main-check check" src="./public/img/check-blue.svg" alt="">
+                                    <img class="main-edit" src="./public/img/nav-icon1-normal.svg" alt="">
+                                    <img class="main-delete" src="./public/img/icon-trash-can.svg" alt="">
                                 </div>
                             </div>
-                            <div class="classify-content_second d-flex align-items-center justify-content-between">
-                                <input class="second-input" type="text" value="我是子分類" disabled="disabled">
-                                <div class="icon">
-                                    <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
-                                    <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
+                            <div class="classify-content_second-box">
+                                <div class="classify-content_second d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <input class="second-input" type="text" value="我是子分類" disabled="disabled">
+                                    </div>
+                                    <div class="icon">
+                                        <img class="second-check check" src="./public/img/check-gray.svg" alt="">
+                                        <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
+                                        <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="classify-content_second d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <input class="second-input" type="text" value="我是子分類" disabled="disabled">
+                                    </div>
+                                    <div class="icon">
+                                        <img class="second-check check" src="./public/img/check-gray.svg" alt="">
+                                        <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
+                                        <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-3 classify-content_inner">
-                        <div class="classify-content_main d-flex align-items-center">
-                            <div class="name">
-                                <div class="normal">
-                                    <p class="name_p">公司音檔列表</p>
-                                    <img class="arrow" src="./public/img/icon-arrow-blue.svg" alt="">
+                    <div class="col-md-6 classify-content_inner">
+                        <div class="mb-3">
+                            <div class="classify-content_main d-flex align-items-center">
+                                <div class="name">
+                                    <div class="normal">
+                                        <p class="name_p">新增小時音檔</p>
+                                        <img class="arrow" src="./public/img/icon-arrow-blue.svg" alt="">
+                                    </div>
+                                    <div class="edit">
+                                        <input class="name_input" type="text" value="">
+                                    </div>
                                 </div>
-                                <div class="edit">
-                                    <input class="name_input" type="text" value="">
+                                <div class="icon">
+                                    <img class="main-check check" src="./public/img/check-blue.svg" alt="">
+                                    <img class="main-edit" src="./public/img/nav-icon1-normal.svg" alt="">
+                                    <img class="main-delete" src="./public/img/icon-trash-can.svg" alt="">
                                 </div>
                             </div>
-                            <div class="icon">
-                                <img class="main-check check" src="./public/img/check-blue.svg" alt="">
-                                <img class="main-edit" src="./public/img/nav-icon1-normal.svg" alt="">
-                                <img class="main-delete" src="./public/img/icon-trash-can.svg" alt="">
+                            <div class="classify-content_second-box">
+                                <div class="classify-content_second d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <input class="second-input" type="text" value="我是子分類" disabled="disabled">
+                                    </div>
+                                    <div class="icon">
+                                        <img class="second-check check" src="./public/img/check-gray.svg" alt="">
+                                        <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
+                                        <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="classify-content_second d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <input class="second-input" type="text" value="我是子分類" disabled="disabled">
+                                    </div>
+                                    <div class="icon">
+                                        <img class="second-check check" src="./public/img/check-gray.svg" alt="">
+                                        <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
+                                        <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="classify-content_second-box">
-                            <div class="classify-content_second d-flex align-items-center justify-content-between">
-                                <div>
-                                    <input class="second-input" type="text" value="我是子分類" disabled="disabled">
+                        <div class="mb-3">
+                            <div class="classify-content_main d-flex align-items-center">
+                                <div class="name">
+                                    <div class="normal">
+                                        <p class="name_p">新增公司音檔</p>
+                                        <img class="arrow" src="./public/img/icon-arrow-blue.svg" alt="">
+                                    </div>
+                                    <div class="edit">
+                                        <input class="name_input" type="text" value="">
+                                    </div>
                                 </div>
                                 <div class="icon">
-                                    <img class="second-check check" src="./public/img/check-gray.svg" alt="">
-                                    <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
-                                    <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="classify-content_second d-flex align-items-center justify-content-between">
-                                <input class="second-input" type="text" value="我是子分類" disabled="disabled">
-                                <div class="icon">
-                                    <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
-                                    <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="classify-content_second d-flex align-items-center justify-content-between">
-                                <input class="second-input" type="text" value="我是子分類" disabled="disabled">
-                                <div class="icon">
-                                    <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
-                                    <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
+                                    <img class="main-check check" src="./public/img/check-blue.svg" alt="">
+                                    <img class="main-edit" src="./public/img/nav-icon1-normal.svg" alt="">
+                                    <img class="main-delete" src="./public/img/icon-trash-can.svg" alt="">
                                 </div>
                             </div>
-                            <div class="classify-content_second d-flex align-items-center justify-content-between">
-                                <input class="second-input" type="text" value="我是子分類" disabled="disabled">
-                                <div class="icon">
-                                    <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
-                                    <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
+                            <div class="classify-content_second-box">
+                                <div class="classify-content_second d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <input class="second-input" type="text" value="我是子分類" disabled="disabled">
+                                    </div>
+                                    <div class="icon">
+                                        <img class="second-check check" src="./public/img/check-gray.svg" alt="">
+                                        <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
+                                        <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="classify-content_second d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <input class="second-input" type="text" value="我是子分類" disabled="disabled">
+                                    </div>
+                                    <div class="icon">
+                                        <img class="second-check check" src="./public/img/check-gray.svg" alt="">
+                                        <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
+                                        <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="classify-content_second d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <input class="second-input" type="text" value="我是子分類" disabled="disabled">
+                                    </div>
+                                    <div class="icon">
+                                        <img class="second-check check" src="./public/img/check-gray.svg" alt="">
+                                        <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
+                                        <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="classify-content_second d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <input class="second-input" type="text" value="我是子分類" disabled="disabled">
+                                    </div>
+                                    <div class="icon">
+                                        <img class="second-check check" src="./public/img/check-gray.svg" alt="">
+                                        <img class="second-edit" src="./public/img/icon-edit-gray.svg" alt="">
+                                        <img class="second-delete" src="./public/img/icon-trash-can-gray.svg" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
